@@ -1,94 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Custom Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/8084e45a7c.js" crossorigin="anonymous"></script>
-
+    <script
+      src="https://kit.fontawesome.com/8084e45a7c.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>CCT Rental</title>
-</head>
-<body>
-<header>
-    <!-- Navbar -->
-    <nav class="navbar bg-dark-gray">
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar bg-dark-gray">
         <div class="container-fluid">
-            <!-- Navbar brand (Logo) -->
-            <a class="navbar-brand" href="#">
-                <i class="fa-solid fa-film"></i> CCT Rental
-            </a>
-            <!-- Navbar links with a dropdown -->
-            <div class="navbar-nav">
-                <div class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="genreDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Genres
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="genreDropdown">
-                        <a class="dropdown-item" href="#drama">Drama</a>
-                        <a class="dropdown-item" href="#thriller">Thriller</a>
-                        <!-- Add more genre links as needed -->
-                    </div>
-                </div>
+          <!-- Navbar brand (Logo) -->
+          <a class="navbar-brand" href="index.html">
+            <i class="fa-solid fa-film"></i> CCT Rental
+          </a>
+          <!-- Navbar links with a dropdown -->
+          <div class="navbar-nav">
+            <div class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="genreDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Genres
+              </a>
+              <!-- Dropdown Menu-->
+              <div
+                class="dropdown-menu"
+                aria-labelledby="genreDropdown"
+                id="genreDropdownMenu"
+              ></div>
             </div>
+          </div>
         </div>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<div class="container-fluid py-5">
-<!-- Gallery of Movies -->
+    <div class="container-fluid py-5">
+      <!-- Gallery of Movies -->
 
-<div id="gallery-container" class="gallery d-flex justify-content-center"></div>
+      <div
+        id="gallery-container"
+        class="gallery d-flex justify-content-center"
+      ></div>
+    </div>
 
-</div>
+    <!-- JavaScript -->
+    <script>
+      // Fetch the film data from the JSON file
+      fetch("film.json")
+        .then((response) => response.json())
+        .then((data) => {
+          const movies = data.movies;
 
-<!--JavaScript -->
-<script>
-    // Fetch the film data from the JSON file
-    fetch('film.json')
-        .then(response => response.json())
-        .then(data => {
-            // Access the movies array
-            const movies = data.movies;
+          const galleryContainer = document.getElementById("gallery-container");
 
-            // Get the container where you want to display the gallery (replace 'gallery-container' with the actual ID or class of your container)
-            const galleryContainer = document.getElementById('gallery-container');
+          movies.forEach((movie) => {
+            const linkElement = document.createElement("a");
+            linkElement.href = `movie_detail.html?id=${movie.id}`;
 
-            // Iterate through each movie and create an <img> element for the poster
-            movies.forEach(movie => {
-                // Create an <img> element
-                const imgElement = document.createElement('img');
+            const imgElement = document.createElement("img");
+            imgElement.src = movie.posterUrl;
+            imgElement.alt = movie.title;
+            imgElement.width = movie.thumbnail_width;
+            imgElement.height = movie.thumbnail_height;
+            imgElement.classList.add("gallery");
 
-                // Set the src attribute using the posterUrl from the movie data
-                imgElement.src = movie.posterUrl;
+            linkElement.appendChild(imgElement);
 
-                // Set alt attribute (you can customize this based on your data)
-                imgElement.alt = movie.title;
-
-                // Append the <img> element to the gallery container
-                galleryContainer.appendChild(imgElement);
-            });
+            galleryContainer.appendChild(linkElement);
+          });
         })
-        .catch(error => console.error('Error fetching film data:', error));
-</script>
+        .catch((error) => console.error("Error fetching film data:", error));
 
+      $(document).ready(function () {
+        var genres = [
+          "Comedy",
+          "Fantasy",
+          "Crime",
+          "Drama",
+          "Music",
+          "Adventure",
+          "History",
+          "Thriller",
+          "Animation",
+          "Family",
+          "Mystery",
+          "Biography",
+          "Action",
+          "Film-Noir",
+          "Romance",
+          "Sci-Fi",
+          "War",
+          "Western",
+          "Horror",
+          "Musical",
+          "Sport",
+        ];
 
-<!-- Bootstrap JS and its dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-4niQ/+EXB3zq4dbog5wREZms5tNjsbL+BD8Z1n9DIe7bBHQj6ekZz8LAkmrWN6Hr" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofL2z5oCD9g2F5Jq5FJabXhUpF5Zfs0bV" crossorigin="anonymous"></script>
+        var dropdownMenu = $("#genreDropdownMenu");
+        genres.forEach(function (genre) {
+          dropdownMenu.append(
+            '<a class="dropdown-item" href="#">' + genre + "</a>"
+          );
+        });
 
-    
-</body>
+        $(".dropdown-item").on("click", function () {
+          console.log("Dropdown item clicked:", $(this).text());
+        });
+      });
+    </script>
+
+    <!-- Bootstrap JS and its dependencies -->
+    <!-- Bootstrap JS and its dependencies -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofL2z5oCD9g2F5Jq5FJabXhUpF5Zfs0bV"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>

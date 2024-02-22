@@ -25,9 +25,6 @@ header a {
     font-size: 25px;
  }
 
- /* Gallery */
-
-/* Add these styles to your style.css file */
 
 /* Gallery container */
 .gallery {
@@ -36,11 +33,18 @@ header a {
     gap: 10px; /* Adjust the gap between images as needed */
 }
 
-/* Style for individual gallery images */
+/*individual gallery images */
 .gallery img {
-    width: 200px; /* Set a fixed width */
-    height: 250px; /* Set a fixed height */
-    object-fit: cover; /* Ensure the image covers the specified dimensions */
-    border-radius: 8px; /* Optional: Add rounded corners to the images */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+    width: 200px; 
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* movie-dewtail page */
+.rounded-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha (fourth value) for transparency */
+    border-radius: 15px; /* Adjust the border-radius as needed */
+    padding: 15px; /* Add padding as needed */
 }
