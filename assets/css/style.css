@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 16px;
+    background-color: #D3D3D3;
+}
+
+/* Header & Navbar */
+.navbar.bg-dark-gray {
+    background-color: #535453 !important;
+    width: 100%;
+}
+
+
+header a {
+    color: #D3D3D3 !important;
+    font-size: 25px;
+ }
+
+ /* Gallery */
+
+/* Add these styles to your style.css file */
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Adjust the gap between images as needed */
+}
+
+/* Style for individual gallery images */
+.gallery img {
+    width: 200px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the specified dimensions */
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle box shadow */
+}
