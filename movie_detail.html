@@ -35,35 +35,41 @@
     <header>
       <!-- Navbar -->
       <nav class="navbar bg-dark-gray">
-        <div class="container-fluid">
+        <div class="container-fluid justify-content-center">
           <!-- Navbar brand (Logo) -->
           <a class="navbar-brand" href="index.html">
             <i class="fa-solid fa-film"></i> CCT Rental
           </a>
-          <!-- Navbar links with a dropdown -->
-          <div class="navbar-nav">
-            <div class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="genreDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-              >
-                Genres
-              </a>
-              <div class="dropdown-menu" aria-labelledby="genreDropdown">
-                <a class="dropdown-item" href="#drama">Drama</a>
-                <a class="dropdown-item" href="#thriller">Thriller</a>
-                
-              </div>
-            </div>
-          </div>
         </div>
       </nav>
     </header>
+  
+  
+    <!-- Genre Buttons -->
+  
+    <div class="container-fluid genre-button py-5">
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Comedy')">Comedy</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Fantasy')">Fantasy</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Crime')">Crime</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Drama')">Drama</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Music')">Music</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Adventure')">Adventure</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('History')">History</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Thriller')">Thriller</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Animation')">Animation</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Family')">Family</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Mystery')">Mystery</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Biography')">Biography</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Action')">Action</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Film-Noir')">Film-Noir</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Romance')">Romance</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Sci-Fi')">Sci-Fi</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('War')">War</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Western')">Western</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Horror')">Horror</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Musical')">Musical</button>
+      <button type="button" class="btn btn-secondary" onclick="filterMovies('Sport')">Sport</button>
+  </div>
 
     <!-- Movie Details  -->
     <div class="container mt-5">
@@ -80,6 +86,7 @@
                 <h3 id="moviePlot"></h3>
                 <p id="movieCast"></p>
                 <p id="movieDirector"></p>
+                <iframe id="movieVideo" width="560" height="315" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
