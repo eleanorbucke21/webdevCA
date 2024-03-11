@@ -16,7 +16,17 @@ fetch('film.json')
 
         // Check if the movie is found
         if (selectedMovie) {
-            document.getElementById('movieImage').src = selectedMovie.posterUrl;
+            // For larger screens
+            document.getElementById('movieImageLarge').src = selectedMovie.posterUrl;
+
+            // For smaller screens
+            const smallScreenImage = document.getElementById('movieImageSmall');
+            if (smallScreenImage) {
+                smallScreenImage.src = selectedMovie.posterUrl;
+                smallScreenImage.style.display = 'none'; // hide on small screens
+            }
+
+            // Set other movie details
             document.getElementById('movieTitle').textContent = selectedMovie.title;
             document.getElementById('moviePlot').textContent = selectedMovie.plot;
             document.getElementById('movieCast').textContent = `Cast: ${selectedMovie.actors}`;
@@ -36,5 +46,3 @@ fetch('film.json')
         }
     })
     .catch(error => console.error('Error fetching movie data:', error));
-
-
