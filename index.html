@@ -22,75 +22,23 @@
   <!-- FONT AWESOME-->
   <script src="https://kit.fontawesome.com/8084e45a7c.js" crossorigin="anonymous"></script>
 
+  <!-- Navbar Script-->
+
+
   <title>CCT Rental</title>
 </head>
 
 <body class="bg-dark">
+  <!-- Navbar -->
   <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
-
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="index.html">
-          <i class="fa-solid fa-film"></i> CCT Rental
-        </a>
-
-        <!-- Navbar toggle button  -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar items -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-
-            <!-- Genre DropDown List-->
-            <li class="nav-item">
-              <div class="btn-group">
-                <button type="button" class="btn btn-dark btn-lg dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Genre
-                </button>
-                <div class="dropdown-menu dropdown-menu-lg" id="genreDropdown">
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Comedy')">Comedy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Fantasy')">Fantasy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Crime')">Crime</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Drama')">Drama</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Music')">Music</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Adventure')">Adventure</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('History')">History</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Thriller')">Thriller</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Animation')">Animation</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Family')">Family</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Mystery')">Mystery</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Biography')">Biography</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Action')">Action</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Film-Noir')">Film-Noir</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Romance')">Romance</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sci-Fi')">Sci-Fi</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('War')">War</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Western')">Western</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Horror')">Horror</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Musical')">Musical</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sport')">Sport</button>
-                </div>
-              </div>
-            </li>
-
-    </nav>
+    <div id="navbarContainer"></div>
   </header>
-
 
   <div class="container-fluid bg-dark py-5">
     <!-- Gallery of Movies -->
 
     <div id="gallery-container" class="gallery d-flex justify-content-center"></div>
   </div>
-
-
-
-
 
   <!-- Bootstrap JS and its dependencies -->
 
@@ -101,8 +49,9 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 
-  <!-- Custom Script-->
+  <!-- Custom JavaScript-->
   <script src="filter_movies.js"></script>
+  <script src="navbar.js"></script>
 </body>
 
 </html>

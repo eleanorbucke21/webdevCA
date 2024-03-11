@@ -26,67 +26,11 @@
 </head>
 
 <body class="bg-dark">
-  <header>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-dark">
-      <div class="container-fluid">
 
-        <!-- Navbar brand -->
-        <a class="navbar-brand" href="index.html">
-          <i class="fa-solid fa-film"></i> CCT Rental
-        </a>
-
-        <!-- Navbar toggle button  -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar items and genre button on the right -->
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul class="navbar-nav">
-
-            <div class="container-fluid genre-button py-5 btn btn-dark">
-              <div class="btn-group">
-                <button type="button" class="btn btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  Genre
-                </button>
-                <div class="dropdown-menu" id="genreDropdown">
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Comedy')">Comedy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Fantasy')">Fantasy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Crime')">Crime</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Drama')">Drama</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Music')">Music</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Adventure')">Adventure</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('History')">History</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Thriller')">Thriller</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Animation')">Animation</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Family')">Family</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Mystery')">Mystery</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Biography')">Biography</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Action')">Action</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Film-Noir')">Film-Noir</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Romance')">Romance</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sci-Fi')">Sci-Fi</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('War')">War</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Western')">Western</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Horror')">Horror</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Musical')">Musical</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sport')">Sport</button>
-                </div>
-              </div>
-            </div>
-    </nav>
-    <span class="border-bottom border-white">
-    </span>
-  </header>
-
+<!-- Navbar -->
+<header>
+  <div id="navbarContainer"></div>
+</header>
 
   <!-- Movie Details  -->
   <div class="container my-5">
@@ -130,9 +74,10 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
 
-  <!-- Custom JavaScript file -->
+  <!-- Custom JavaScript -->
   <script src="filter_movies.js"></script>
   <script src="movie_detail.js"></script>
+  <script src="navbar.js"></script>
 </body>
 
 </html>

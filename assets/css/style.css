@@ -1,3 +1,5 @@
+/* style.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -14,8 +16,6 @@ body {
 }
 
 /* Header & Navbar */
-
-
 .navbar-brand {
     padding-bottom: .3125rem;
     font-size: 3.25rem;
@@ -28,11 +28,19 @@ body {
     border-bottom: 2px solid #fff; /* Adjust the border color and thickness as needed */
 }
 
+/* Always display the genre button */
+.btn-group-genre {
+    display: block;
+}
+
+.dropdown-menu-genre {
+    min-width: 200px; 
+}
+
 header a {
     color: #D3D3D3 !important;
     font-size: 25px;
- }
-
+}
 
 /* Gallery container */
 .gallery {
@@ -41,7 +49,7 @@ header a {
     gap: 10px; /* Adjust the gap between images as needed */
 }
 
-/*individual gallery images */
+/* Individual gallery images */
 .gallery img {
     width: 200px; 
     height: 250px;
@@ -49,6 +57,3 @@ header a {
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-
-
