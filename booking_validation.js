@@ -32,8 +32,9 @@ function validateBookingForm() {
     return false;
   }
 
-  // If all validations pass, show a thank you popup
+  // If all validations pass, show a thank you popup and redirect to index.html
   showThankYouPopup();
+  window.location.href = 'index.html';
 
   // Prevent form submission
   return false;
