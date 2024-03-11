@@ -36,3 +36,5 @@ fetch('film.json')
         }
     })
     .catch(error => console.error('Error fetching movie data:', error));
+
+

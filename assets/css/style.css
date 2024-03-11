@@ -14,11 +14,19 @@ body {
 }
 
 /* Header & Navbar */
-.navbar.bg-dark-gray {
-    background-color: #535453 !important;
-    width: 100%;
+
+
+.navbar-brand {
+    padding-bottom: .3125rem;
+    font-size: 3.25rem;
+    text-decoration: none;
+    white-space: nowrap;
+    margin-left: 1rem;
 }
 
+.navbar {
+    border-bottom: 2px solid #fff; /* Adjust the border color and thickness as needed */
+}
 
 header a {
     color: #D3D3D3 !important;
@@ -42,9 +50,5 @@ header a {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* movie-dewtail page */
-.rounded-container {
-    background-color: rgba(255, 255, 255, 0.8); /* Adjust the alpha (fourth value) for transparency */
-    border-radius: 15px; /* Adjust the border-radius as needed */
-    padding: 15px; /* Add padding as needed */
-}
+
+
