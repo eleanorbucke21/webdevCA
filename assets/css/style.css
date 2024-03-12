@@ -42,6 +42,22 @@ header a {
     font-size: 25px;
 }
 
+/* Footer */
+
+.content {
+    flex: 1;
+}
+
+footer {
+    background-color: #ffffff; /* White background */
+    border-top: 2px solid #ccc; /* White border on top */
+    padding: 10px; /* Adjust padding as needed */
+    margin-top: auto; /* Push the footer to the bottom */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
 /* Gallery container */
 .gallery {
     display: flex;
