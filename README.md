@@ -1,4 +1,4 @@
-![Homepage](assets/images/cct-rental.png)
+![Homepage](assets/images/amiresponsive.png)
 
 # 📽️ CCT Rental
 
@@ -8,6 +8,7 @@ A responsive movie rental web application built with HTML, CSS, Bootstrap, and J
 
 - [User Experience](#-user-experience)
 - [Features](#-features)
+- [Images](#️-image-previews)
 - [Technologies Used](#-technologies-used)
 - [File Structure](#-file-structure)
 - [Testing](#-testing)
@@ -88,6 +89,16 @@ A responsive movie rental web application built with HTML, CSS, Bootstrap, and J
 
 ---
 
+## 🖼️ Image Previews
+
+| Description        | Image                                                                 |
+|--------------------|------------------------------------------------------------------------|
+| Movie Detail Page  | <img src="assets/images/movie_Detail.png" alt="Movie Detail" width="300"> |
+| Genre Dropdown     | <img src="assets/images/genre_button.png" alt="Genre Button" height="300"> |
+| Homepage           | <img src="assets/images/cct-rental.png" alt="Homepage" width="300">      |
+
+---
+
 ## 🛠️ Technologies Used
 
 | Tech              | Purpose                           |
@@ -123,7 +134,7 @@ CCT-Rental/
 
 ## ✅ Testing
 
-See TESTING.md for full validation and test logs.
+See [TESTING.md](TESTING.md) for full validation and test logs.
 
 Highlights:
 
