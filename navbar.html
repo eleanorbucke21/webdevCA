@@ -39,59 +39,54 @@
     <!-- Navbar -->
 <nav class="navbar navbar-expand-lg bg-dark">
   <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="index.html">
+      <i class="fas fa-film"></i> CCT Rental
+    </a>
 
-      <!-- Navbar brand -->
-      <a class="navbar-brand" href="index.html">
-          <i class="fas fa-film"></i> CCT Rental
-      </a>
+    <!-- Navbar toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <!-- Navbar toggle button  -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!-- Navbar items -->
-      <div class="navbar-collapse collapse show" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-              <!-- Genre DropDown List-->
-              <li class="nav-item">
-                  <div class="btn-group-genre">
-                      <button type="button" class="btn btn-dark btn-lg dropdown-toggle" data-bs-toggle="dropdown"
-                          aria-haspopup="true" aria-expanded="false">
-                          Genre
-                      </button>
-                      <div class="dropdown-menu dropdown-menu-genre" id="genreDropdown">
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Comedy')">Comedy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Fantasy')">Fantasy</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Crime')">Crime</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Drama')">Drama</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Music')">Music</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Adventure')">Adventure</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('History')">History</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Thriller')">Thriller</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Animation')">Animation</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Family')">Family</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Mystery')">Mystery</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Biography')">Biography</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Action')">Action</button>
-                  <button type="button" class="dropdown-item d-block"
-                    onclick="filterMovies('Film-Noir')">Film-Noir</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Romance')">Romance</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sci-Fi')">Sci-Fi</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('War')">War</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Western')">Western</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Horror')">Horror</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Musical')">Musical</button>
-                  <button type="button" class="dropdown-item d-block" onclick="filterMovies('Sport')">Sport</button>
-                </div>
-              </div>
-            </li>
-    </nav>
+    <!-- Navbar items -->
+    <div class="collapse navbar-collapse show" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <!-- Genre Dropdown Section -->
+        <li class="nav-item dropdown">
+          <button class="btn btn-dark btn-lg dropdown-toggle" id="genreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+            Genre
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="genreDropdown">
+            <li><button class="dropdown-item" onclick="filterMovies('Action')">Action</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Adventure')">Adventure</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Animation')">Animation</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Biography')">Biography</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Comedy')">Comedy</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Crime')">Crime</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Drama')">Drama</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Family')">Family</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Fantasy')">Fantasy</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Film-Noir')">Film-Noir</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('History')">History</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Horror')">Horror</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Music')">Music</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Musical')">Musical</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Mystery')">Mystery</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Romance')">Romance</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Sci-Fi')">Sci-Fi</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Sport')">Sport</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Thriller')">Thriller</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('War')">War</button></li>
+            <li><button class="dropdown-item" onclick="filterMovies('Western')">Western</button></li>
+          </ul>
+        </li>
+      </ul>
+    </div> <!-- end of collapse navbar-collapse -->
+  </div> <!-- end of container-fluid -->
+</nav>
+    <!-- End of Navbar -->
   </header>
   <!-- Custom Script-->
   <script src="filter_movies.js"></script>

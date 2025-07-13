@@ -29,14 +29,10 @@ body {
 }
 
 /* Always display the genre button */
-.btn-group-genre {
-    display: block;
+.navbar-nav .nav-item .nav-link {
+    color: #000 !important; /* Black text color */
+    font-weight: bold;
 }
-
-.dropdown-menu-genre {
-    min-width: 200px; 
-}
-
 header a {
     color: #D3D3D3 !important;
     font-size: 25px;
