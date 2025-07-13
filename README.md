@@ -4,6 +4,8 @@
 
 A responsive movie rental web application built with HTML, CSS, Bootstrap, and JavaScript. Users can browse a gallery of films, filter by genre, view details about selected movies, and book them for rental.
 
+:desktop_computer: [Live Website](https://eleanorbucke21.github.io/webdevCA/)
+
 ## 📚 Table of Contents
 
 - [User Experience](#-user-experience)
