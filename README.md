@@ -1,3 +1,5 @@
+![Homepage](assets/images/cct-rental.png)
+
 # 📽️ CCT Rental
 
 A responsive movie rental web application built with HTML, CSS, Bootstrap, and JavaScript. Users can browse a gallery of films, filter by genre, view details about selected movies, and book them for rental.
@@ -14,6 +16,9 @@ A responsive movie rental web application built with HTML, CSS, Bootstrap, and J
   - Embedded YouTube trailer
   - "Book Now" button
 - 🧩 Fully responsive design using Bootstrap
+- 🔝 Reusable navigation bar injected via JavaScript
+- 🔻 Responsive dropdown menu for genre selection
+- 🔚 Footer with social icons and attribution, also loaded dynamically
 - 🗂️ Modular structure using external HTML fragments (navbar, footer)
 
 ---
